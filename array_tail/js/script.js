@@ -15,13 +15,13 @@ const userNumber = parseInt(prompt("Inserisci un numero di elementi"));
 const userPrint = parseInt(prompt("Quanti elementi stamperemo?"));
 
 // Verifichiamo se l'input dell'utente è un numero valido
-if (isNaN(userNumber) || userNumber <= 0 || isNaN(userPrint) || userPrint <= 0 || userPrint > userNumber) {
+if (isNaN(userNumber) || isNaN(userPrint) || userPrint < 0 || userNumber > 100 || userPrint >= userNumber || userNumber < userPrint) {
     alert("Inserisci un numero valido di elementi da stampare.");
     location.reload()
 } else {
     // Creiamo l'array e generiamo numeri casuali per ogni elemento
     const array = [];
-    for (let i = 0; i < userNumber; i++) {
+    for (let i = 1; i <= userNumber; i++) {
         const numeroRandom = Math.floor(Math.random() * 100) + 1;
         array.push(numeroRandom);
     }
