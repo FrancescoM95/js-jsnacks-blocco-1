@@ -23,8 +23,6 @@ console.log(frigo);
    - se non lo trovo: "Oh no, devo uscire a comprare il cocomero!"
 */
 let found = false;
-let messageok = "Trovato! Devo solo preparare il cocktail.";
-let messageko = "Oh no, devo uscire a comprare il cocomero!";
 
 for (let i = 0; i < frigo.length && !found; i++) {
     if (frigo[i] === 'cocomero') {
@@ -33,4 +31,6 @@ for (let i = 0; i < frigo.length && !found; i++) {
     console.log(found);
 }
 
-found ? console.log(messageok) : console.log(messageko);
+const message = found ? "Trovato! Devo solo preparare il cocktail." : "Oh no, devo uscire a comprare il cocomero!";
+
+console.log(message);
